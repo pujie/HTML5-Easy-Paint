@@ -39,7 +39,6 @@ function init() {
 
 function onMouseMove(ev) {
 	var x, y;
-		
 	// Get the mouse position.
 	if (ev.layerX >= 0) {
 		// Firefox
@@ -51,7 +50,8 @@ function onMouseMove(ev) {
 		x = ev.offsetX - 50;
 		y = ev.offsetY - 5;
 	}
-	
+	started = true;
+	/*
 	if (!started) {
 		started = true;
 
@@ -62,7 +62,7 @@ function onMouseMove(ev) {
 		context.lineTo(x, y);
 		context.stroke();
 	}
-	
+	*/
 	$('#stats').text(x + ', ' + y);
 }
 
